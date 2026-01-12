@@ -1,0 +1,379 @@
+[12/01, 1:07 pm] Mannuu 🥰❤️🧿: 1. Build Failure in Jenkins Pipeline
+
+📍 Scenario: A Jenkins job frequently fails during the build phase.
+
+📌 Question: How would you approach troubleshooting the build failure?
+
+✅ Review the Jenkins console output to identify the exact error message.
+
+✅ Check for issues like missing dependencies, incorrect configuration, or environment setup.
+
+✅ Ensure Jenkinsfile syntax is correct, and verify build scripts and tools are installed correctly on build agents.
+
+2. Deployment Fails Due to Environment Mismatch
+
+📍Scenario: A deployment to a staging environment works, but it fails in production.
+
+📌 Question: How do you identify and fix the issue?
+
+✅ Compare environment variables, configuration files, and infrastructure (e.g., database versions, libraries).
+
+✅ Ensure that production and staging environments are as identical as possible.
+
+✅ Use configuration management tools to ensure consistency.
+
+3. Pipeline Hangs at a Certain Step
+
+📍Scenario: A CI/CD pipeline hangs or times out at a particular step.
+
+📌 Question: How do you go about diagnosing the issue?
+
+✅ Check logs for the step in question for any error messages.
+
+✅ Identify if there is a resource bottleneck (e.g., insufficient memory or disk space).
+
+✅ Increase pipeline timeouts and check if the pipeline depends on external services that might be slow or unresponsive.
+
+4. Flaky Test Failures in Pipeline
+
+📍Scenario: Tests are sometimes passing and sometimes failing in the pipeline, with no code changes.
+
+📌 Question: How would you handle flaky tests?
+
+✅ Analyze the test failure patterns to see if specific tests or resources are causing intermittent issues.
+
+✅ Investigate potential race conditions, data dependency, or unstable external services.
+
+✅ Consider isolating flaky tests or running them in different environments for reproducibility.
+
+5. Permission Denied Errors
+
+📍 Scenario: The pipeline fails due to permission denied errors during deployment.
+
+📌 Question: How do you troubleshoot permission errors in the CI/CD pipeline?
+
+✅ Verify user permissions for accessing resources (e.g., file system, APIs, databases).
+
+✅ Check the permission configurations for the CI/CD runner and verify correct deployment keys or tokens.
+
+✅ Ensure the correct user or service account is being used during deployment.
+
+6. Slow Performance of CI/CD Pipeline
+
+📍 Scenario: The CI/CD pipeline is running much slower than expected.
+
+📌 Question: What are the steps to optimize and troubleshoot slow performance?
+
+✅ Identify bottlenecks by analyzing each stage’s execution time in the pipeline.
+
+✅ Parallelize jobs where possible, optimize build and test stages, and consider caching dependencies.
+
+✅ Monitor and profile the infrastructure used in the pipeline (e.g., build agents, containers).
+
+7. Artifact Deployment Fails Due to Version Conflict
+
+📍 Scenario: A deployment fails due to version conflicts in dependencies.
+
+📌 Question: How would you approach troubleshooting a dependency version conflict in the pipeline?
+
+✅ Examine the dependency tree for conflicting versions of libraries or packages.
+
+✅ Update the dependency management system (e.g., Maven, npm) to resolve conflicts or use dependency locking techniques.
+
+✅ Ensure proper versioning of artifacts in your CI/CD pipeline.
+
+8. Security Vulnerabilities Found During Pipeline Execution
+
+📍 Scenario: A security scanning tool in the pipeline identifies vulnerabilities.
+
+📌 Question: How would you handle vulnerabilities detected in the pipeline?
+
+✅ Prioritize and analyze the vulnerabilities reported by the security tool (e.g., OWASP Dependency-Check, Snyk).
+
+✅ Patch or upgrade affected dependencies and review code for security misconfigurations.
+
+✅ Automate vulnerability detection and remediation workflows within the pipeline.
+
+9. Failed Rollback During Deployment
+
+📍 Scenario: A rollback operation fails after a deployment issue.
+
+📌 Question: How do you handle a failed rollback during deployment?
+
+✅ Investigate the cause of rollback failure (e.g., mismatched application state, improper rollback scripts).
+
+✅ Ensure rollback procedures are tested as thoroughly as deployments.
+
+✅ Implement versioned, atomic, and reversible deployment practices (e.g., blue-green deployment, feature toggles).
+
+10. Docker Image Fails to Build
+
+📍 Scenario: The pipeline fails at the Docker build step.
+
+📌 Question: How would you troubleshoot a Docker image build failure?
+
+✅ Review the Docker build logs for specific build errors, such as missing dependencies or misconfigured Dockerfiles.
+
+✅ Check for build context issues, Dockerfile syntax, or network-related problems.
+
+✅ Ensure that the correct base image and dependencies are used, and rebuild layers if necessary.
+
+11. Service Not Accessible After Deployment
+
+📍 Scenario: A service is not accessible after deployment even though it is running.
+
+📌 Question: How do you troubleshoot this issue?
+
+✅ Check the network configuration (firewall, DNS, routing) and ensure ports are open and properly mapped.
+
+✅ Verify the service’s health using monitoring tools (e.g., Kubernetes health checks, Docker logs).
+
+✅ Ensure proper load balancer or proxy configurations, if applicable.
+
+12. Failed Integration Between CI/CD Tools
+
+📍 Scenario: The CI/CD pipeline is integrated with tools like Git, Jira, and Slack, but integrations are failing.
+
+📌 Question: How do you identify the root cause of the integration failure?
+
+✅ Verify connection settings (e.g., API keys, authentication credentials) between CI/CD tools (e.g., Git, Jira, Slack).
+
+✅ Check for recent updates or changes to the integration services (e.g., APIs, webhooks).
+
+✅ Review logs and trace errors to identify integration points causing the failure.
+[12/01, 1:15 pm] Mannuu 🥰❤️🧿: 1. Build Failures
+
+Scenario: A developer’s commit fails the pipeline in production.
+
+Questions:
+
+Your build suddenly started failing after a successful commit yesterday. How do you approach debugging this?
+
+How would you identify if a build failure is due to the pipeline configuration, dependency issues, or code changes?
+
+If a Docker build fails during the npm install step, but works locally, what could be the reasons?
+
+Explain how caching mechanisms (like Gradle/Maven cache, Docker layer cache) might affect build stability. How would you verify that?
+
+Deep-dive probing:
+
+Ask the candidate to explain step-by-step how they would isolate the root cause.
+
+Look for awareness of logs, artifacts, environment differences, network issues, and dependency versions.
+
+2. Test Failures / Flaky Tests
+
+Scenario: Pipeline passes locally but fails intermittently in CI.
+
+Questions:
+
+Your unit tests pass locally but fail intermittently on the CI server. How do you investigate?
+
+How would you detect and debug race conditions or flaky tests in a CI/CD pipeline?
+
+What is the difference between a pipeline failing due to code errors vs. infrastructure instability?
+
+How would you implement retry logic or flake detection in CI/CD pipelines?
+
+Deep-dive probing:
+
+Expect discussion of test isolation, environment consistency, parallel execution, test data management.
+
+Candidate might mention CI environment vs. local environment differences, threading issues, or database state.
+
+3. Deployment Failures
+
+Scenario: A deployment to staging or production fails.
+
+Questions:
+
+Deployment fails with a “connection refused” or “timeout” error to a Kubernetes cluster. How do you troubleshoot?
+
+After deployment, the application starts but the endpoints return 500 errors. How would you trace the problem?
+
+How would you roll back a failed production deployment? Explain different strategies.
+
+A deployment job works in staging but fails in production. What differences would you check?
+
+Deep-dive probing:
+
+Look for familiarity with k8s logs, rolling updates, health checks, service discovery, secrets management, network policies.
+
+Candidate should discuss logging, monitoring, and rollback strategies in production safely.
+
+4. CI/CD Environment & Configuration Issues
+
+Scenario: Developers complain that builds or deployments fail only in CI/CD, not locally.
+
+Questions:
+
+Your pipeline uses environment variables for credentials, but builds fail in CI/CD with “authentication error”. How do you debug?
+
+How do you handle differences between dev, staging, and prod environments in CI/CD?
+
+Explain how you would debug a pipeline failing due to a “permission denied” error on a Linux build agent.
+
+How would you detect if a container image built in CI/CD differs from what developers test locally?
+
+Deep-dive probing:
+
+Look for environment parity issues, secrets/configuration injection, file permission problems, path differences, user access issues.
+
+Candidate should describe step-by-step isolation and verification.
+
+5. Pipeline Performance & Resource Issues
+
+Scenario: Pipeline is slow or times out in production.
+
+Questions:
+
+CI/CD pipeline suddenly starts taking 3x longer than usual. How do you investigate?
+
+Your deployment job fails with “out of memory” errors in the CI/CD agent. How would you fix it?
+
+How do you identify bottlenecks in a multi-stage pipeline (build, test, deploy)?
+
+How would you optimize Docker builds or dependency caching to reduce CI/CD time?
+
+Deep-dive probing:
+
+Look for understanding of resource allocation, agent sizing, caching, parallelization, pipeline visualization, and logs.
+
+6. Integration Issues / Dependency Failures
+
+Scenario: Pipeline fails due to third-party services or microservices issues.
+
+Questions:
+
+Pipeline fails because a downstream API is not responding. How would you ensure your CI/CD is resilient?
+
+How do you handle pipeline failures due to transient network issues or flaky external services?
+
+Explain how you would test changes to microservices in CI/CD to prevent breaking production.
+
+Deep-dive probing:
+
+Candidate should mention mocking dependencies, retries, circuit breakers, and monitoring external services.
+
+7. Security / Compliance Issues
+
+Scenario: CI/CD fails due to security or compliance policies.
+
+Questions:
+
+Pipeline fails because a vulnerability scan detects an insecure dependency. How do you handle this without breaking the release?
+
+How would you debug a pipeline failing due to container image scanning policies?
+
+Explain how secret leaks in CI/CD are detected and prevented.
+
+Deep-dive probing:
+
+Expect discussion on SAST, DAST, secret management, policy enforcement, and compliance gates.
+[12/01, 1:17 pm] Mannuu 🥰❤️🧿: 1. Investigating CI/CD Failures
+
+Your CI pipeline starts failing intermittently only on the CI server but not locally. Describe your full debugging process step‑by‑step.
+
+What tools would you use?
+
+Where would you start first?
+
+How do you reproduce reliably?
+
+A merge into your main branch causes the build to break. How would you identify the exact cause and fix the issue with minimal disruption?
+
+Manual steps?
+
+Using git history?
+
+Preventing it from occurring again?
+
+Your CI/CD build succeeds but the deployment to staging fails with timeout or connection issues. What checks do you perform immediately? What tools/logs do you inspect?
+
+2. Pipeline Runtime & Health
+
+Your pipeline used to take ~10 minutes, now it takes 45. Walk through how you would profile the pipeline and optimize it.
+
+Where would you look for bottlenecks?
+
+How would you reduce build/test time in stages?
+
+CI/CD pipeline fails due to flaky tests. Provide your strategy for identifying flaky tests, isolating them, and permanently fixing them.
+
+Pipeline fails occasionally depending on the environment variables or secrets. How do you debug this and ensure secure, reproducible environments?
+
+Secret injection?
+
+Environment mismatch?
+
+3. Rollbacks, Deploy Strategy & Production Safety
+
+A production deployment goes green but results in errors for users. How do you perform a rollback safely?
+
+What rollback strategies exist?
+
+How do you ensure no data loss?
+
+Explain how you implement zero‑downtime deployments — such as Blue‑Green or Canary — and how to handle a failed canary deployment.
+
+Your app’s infrastructure has drifted (prod vs staging). How do you detect drift and bring environments back into sync gracefully?
+
+4. CI/CD Design & Ownership
+
+Design a CI/CD pipeline from scratch for a microservices project.
+
+Which tools?
+
+How do you handle inter‑service dependencies?
+
+How do you ensure each service deploys independently without breaking others?
+
+How do you implement manual approval gates, quality gates, and security scans in your CI/CD workflow?
+
+Explain at which stages you place them and why.
+
+Describe a time you proactively improved a CI/CD process or pipeline performance. What was the problem? How did you solve it?
+
+Interviewers might ask for real experience like in Reddit threads focusing on real problems faced.
+
+5. GitHub Actions / GitOps Specific Deep Dives
+
+What are the pros/cons of self‑hosted runners vs GitHub’s hosted runners?
+
+How would you troubleshoot runner issues?
+
+How do you scale runners when load spikes?
+
+Explain how you enforce environment protection rules and review policies in GitHub Actions before production deploys.
+
+How do you handle workflow failures due to third‑party API timeouts or rate limits?
+
+Automated retries?
+
+Circuit breakers?
+
+Workflow timeout strategies?
+
+6. Behavioral & Incident Response
+
+These come from highly upvoted Reddit posts highlighting what real interviewers actually ask:
+
+Describe a time you resolved a production outage.
+
+What was the cause?
+
+How did you identify it?
+
+What steps did you take to recover?
+
+What’s the most painful build or deployment you’ve experienced, and what did you learn?
+
+How do you decide what to monitor in a CI/CD system and what alerts to 
+set?
+
+
+[12/01, 12:49 pm] Mannuu 🥰❤️🧿: https://www.youtube.com/watch?v=oUdB2XqtGmk
+[12/01, 12:50 pm] Mannuu 🥰❤️🧿: https://www.youtube.com/watch?v=To-KzPB_EnE&t=10611s
+[12/01, 12:51 pm] Mannuu 🥰❤️🧿: https://www.youtube.com/watch?v=uj0qDN1EWus&t=14s
+[12/01, 1:08 pm] Mannuu 🥰❤️🧿: https://github.com/NotHarshhaa/DevOps-Interview-Questions/blob/master/ci-cd/README.md
+
