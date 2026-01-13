@@ -141,6 +141,9 @@
 ✅ Check for recent updates or changes to the integration services (e.g., APIs, webhooks).
 
 ✅ Review logs and trace errors to identify integration points causing the failure.
+
+==================================================================================================================
+
 [12/01, 1:15 pm] Mannuu 🥰❤️🧿: 1. Build Failures
 
 Scenario: A developer’s commit fails the pipeline in production.
@@ -270,6 +273,10 @@ Explain how secret leaks in CI/CD are detected and prevented.
 Deep-dive probing:
 
 Expect discussion on SAST, DAST, secret management, policy enforcement, and compliance gates.
+
+========================================================================================================
+
+
 [12/01, 1:17 pm] Mannuu 🥰❤️🧿: 1. Investigating CI/CD Failures
 
 Your CI pipeline starts failing intermittently only on the CI server but not locally. Describe your full debugging process step‑by‑step.
@@ -370,7 +377,7 @@ What’s the most painful build or deployment you’ve experienced, and what did
 
 How do you decide what to monitor in a CI/CD system and what alerts to 
 set?
-
+======================================================================================================
 
 [12/01, 12:49 pm] Mannuu 🥰❤️🧿: https://www.youtube.com/watch?v=oUdB2XqtGmk
 [12/01, 12:50 pm] Mannuu 🥰❤️🧿: https://www.youtube.com/watch?v=To-KzPB_EnE&t=10611s
