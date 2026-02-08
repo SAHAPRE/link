@@ -1,0 +1,76 @@
+
+
+
+
+a=5
+a=6
+a=7
+
+
+b=1
+b=2
+b=3
+
+a1 a2 a3
+b1 b2 b3
+
+
+json
+
+
+
+name=prerna, address: bihar , order_amount =2000, product = mobile
+
+{"a": "cat", "b": 5}
+{"service":"order", "pod_count: 5 , "label" =app, product = mobile},{"service":"payment", "pod_count: 5 , "label" =app, product = mobile},{"service":"order", "pod_count: 5 , "label" =app, product = mobile}
+
+
+
+
+
+
+How would you create an Application Load Balancer and attach it to an Auto Scaling Group using Terraform?
+ALB should be in public subnet
+EC2 in private subnet
+CPU-based scaling
+Health checks configured
+
+Launch Template
+Auto Scaling Group
+ALB
+Target Group
+CloudWatch alarms
+
+
+
+
+Q2. How do you create an RDS instance securely using Terraform?
+
+Private subnets
+
+DB subnet group
+Security group--- Restricted inbound access
+Backup retention
+Multi-AZ
+Mandatory tagging
+Encryption enabled
+
+
+Q3. How do you integrate Terraform infra creation with Jenkins/GitHub Actions?
+
+Q4. How do you ensure Terraform does not break production in a pipeline? Incase of Production issue , how quickly you will be rollback
+
+
+Q5 . Create Terraform infrastructure for:
+
+S3 bucket with versioning
+
+Lifecycle rules
+
+Encryption
+
+Restricted access and secure the bucket?
+
+Q6. How do you destroy infra safely?
+
+Q7 . Your Terraform code is creating duplicate resources,What could be the issue?
