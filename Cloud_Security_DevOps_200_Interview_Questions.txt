@@ -1,0 +1,143 @@
+=== AWS Cloud Security ===
+
+What is AWS shared responsibility model?
+How do IAM roles differ from IAM users?
+How do you secure an S3 bucket?
+What is AWS KMS and how is it used?
+Difference between Security Groups and NACLs?
+How do you design a multi-account AWS strategy?
+How do you prevent privilege escalation in AWS?
+How do you detect compromised IAM credentials?
+How do you secure EC2 instances without SSH?
+How do you enforce encryption at rest and in transit?
+How do you manage cross-account access securely?
+How does AWS Organizations help security?
+How do SCPs work?
+How do you detect public resources automatically?
+How do you handle secrets in AWS?
+How do you audit AWS access?
+How do you secure VPC networking?
+How do you respond to a leaked AWS key?
+How do you design Zero Trust in AWS?
+How do you monitor AWS for threats at scale?
+
+
+=== Terraform & IaC ===
+
+What is Terraform state?
+Where should Terraform state be stored?
+What is a Terraform module?
+Difference between count and for_each?
+How do you manage multiple environments in Terraform?
+How do you handle secrets in Terraform?
+What is Terraform drift?
+How do you detect and fix drift?
+How do you version Terraform modules?
+What happens if terraform apply fails mid-way?
+How do you recover a corrupted state file?
+How do you manage provider versions?
+How do you refactor Terraform safely?
+How do you enforce security using Terraform?
+How do you integrate Terraform with CI/CD?
+How do you prevent insecure Terraform changes?
+How do you use Terraform with AWS Organizations?
+How do you handle dependencies between modules?
+How do you design reusable Terraform blueprints?
+How do you manage Terraform at enterprise scale?
+
+
+=== Wiz / CNAPP ===
+
+What is CNAPP?
+How is CNAPP different from CSPM?
+What problems does Wiz solve?
+How does Wiz perform agentless scanning?
+What are toxic combinations in Wiz?
+How does Wiz detect identity risks?
+How do you onboard AWS accounts into Wiz?
+How do you automate Wiz onboarding using Terraform?
+How does Wiz prioritize risks?
+How do you reduce false positives in Wiz?
+How do you integrate Wiz with CI/CD pipelines?
+How do you map Wiz findings to compliance?
+How do you generate audit reports from Wiz?
+How does Wiz detect container vulnerabilities?
+How do you handle Wiz alerts at scale?
+How do you validate Wiz findings manually?
+How do you design Wiz for 500+ AWS accounts?
+How do you enforce remediation using Wiz?
+How does Wiz integrate with AWS Organizations?
+How do you troubleshoot missing resources in Wiz?
+
+
+=== Container & Kubernetes Security ===
+
+What is container image scanning?
+Difference between image scanning and runtime protection?
+How do you secure Docker images?
+How do you manage secrets in Kubernetes?
+What is Kubernetes admission control?
+How do you restrict container privileges?
+How do you secure EKS clusters?
+How do you detect vulnerable containers in runtime?
+How do you prevent container breakout attacks?
+How do you implement network policies in Kubernetes?
+How do you scan images in CI/CD?
+How does Wiz integrate with container security?
+How do you secure multi-tenant Kubernetes clusters?
+How do you handle compromised containers?
+How do you implement zero trust in Kubernetes?
+How do you manage container registries securely?
+How do you prevent supply chain attacks?
+How do you audit Kubernetes access?
+How do you monitor container runtime behavior?
+How do you handle CVEs in production images?
+
+
+=== DevSecOps & CI/CD ===
+
+What is DevSecOps?
+What is shift-left security?
+What security checks belong in CI/CD?
+How do you prevent secrets in pipelines?
+How do you implement policy as code?
+How do you secure CI/CD credentials?
+How do you integrate security tools in pipelines?
+How do you fail pipelines based on risk?
+How do you balance speed vs security?
+How do you audit CI/CD pipelines?
+How do you secure Terraform pipelines?
+How do you automate remediation workflows?
+How do you prevent supply chain attacks in CI/CD?
+How do you ensure artifact integrity?
+How do you enforce least privilege in pipelines?
+How do you monitor pipeline security?
+How do you handle false positives in CI/CD?
+How do you design secure pipelines from scratch?
+How do you integrate Wiz into CI/CD?
+How do you handle rollbacks securely?
+
+
+=== Incident Response & Leadership ===
+
+What are the phases of incident response?
+How do you investigate a cloud breach?
+How do you contain compromised AWS resources?
+How do you automate incident response?
+How do you preserve forensic evidence?
+How do you reduce MTTR?
+How do you avoid alert fatigue?
+How do you prioritize security risks?
+How do you mentor junior engineers?
+How do you handle conflict between security and delivery?
+How do you design defense in depth?
+How do you prove security ROI?
+How do you design security for regulated industries?
+How do you handle third-party risk?
+How do you simulate cloud incidents?
+How do you perform root cause analysis?
+How do you ensure continuous compliance?
+How do you build a security roadmap?
+How do you scale security operations?
+How do you lead DevSecOps adoption?
+
