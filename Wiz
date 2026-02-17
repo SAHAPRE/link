@@ -1,4 +1,3 @@
-
 You said:
 How does pod in A node will communicate with pod in B node
 
@@ -115,21 +114,11 @@ How does Pod in one node communicate with Pod in another node?
 
 You can answer:
 
-In Kubernetes, every Pod gets a unique IP. When a Pod in Node A communicates with a Pod in Node B, the traffic is routed via the CNI plugin. In AWS EKS using VPC CNI, Pods get VPC IPs and traffic flows through VPC routing tables. In overlay-based CNIs like Calico or Flannel, traffic is encapsulated (e.g., VXLAN) and forwarded to the destination node, where it is decapsulated and delivered to the target Pod.
+In Kubernetes, every Pod gets a unique IP. When a Pod in Node A communicates with a Pod in Node B, the traffic is routed via the CNI plugin. 
+In AWS EKS using VPC CNI, Pods get VPC IPs and traffic flows through VPC routing tables. In overlay-based CNIs like Calico or Flannel, 
+traffic is encapsulated (e.g., VXLAN) and forwarded to the destination node, where it is decapsulated and delivered to the target Pod.
 
-If you want, I can also explain:
-
-Pod → Service → Pod communication
-
-How kube-proxy handles traffic
-
-How network policy restricts cross-node communication
-
-Real production troubleshooting scenario
-
-Tell me your preference 👌
-
-
+==========================
 You said:
 5 replicas are there 4pods are getting scheduled and 5th one failing why...?
 
@@ -272,7 +261,7 @@ https://kubernetes.io/images/docs/scheduling-framework-extensions.png
 https://yqintl.alicdn.com/f1e628a4eb4c90118025a7b2800d2669864adfe7.png
 🎯 Interview Answer (Best Structured Way)
 If interviewer asks:
-
+===========================
 You have 5 replicas but only 4 pods are running. What could be the reason?
 
 You should say:
@@ -285,18 +274,7 @@ I would first check the pod status using kubectl get pods. If it's Pending, I wo
 ✔ Insufficient resources
 ✔ Max pods per node reached (very common in EKS)
 ✔ Taints without toleration
-
-If you want, I can now explain:
-
-How Kubernetes scheduler decides placement
-
-How cluster autoscaler solves this
-
-Real DevOps troubleshooting scenario answer
-
-Tell me 👌
-
-
+==============================
 You said:
 Why nexus and ecr repository used
 
