@@ -1,0 +1,10 @@
+How do you prevent privilege escalation in AWS?
+
+Control                   Purpose
+Least privilegeIAM        Reduce accidental over‑permissioning
+SCPs                      Global guardrails preventing malicious IAM modifications
+Permission boundaries     Safe delegation of access management
+Harden iam:PassRole       Block role misuse and EC2/Lambda-based escalation
+Monitor IAM changes       Detect anomalies and unauthorized privilege elevation
+Patch vulnerabilities     Prevent system-level privilege escalation
+Automated scanning        Identify exploitable permission combinations
